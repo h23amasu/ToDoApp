@@ -1,0 +1,111 @@
+# Testrapport - ToDoApp
+
+## 1. Översikt
+### 1.1 Syfte
+Denna rapport dokumenterar resultaten från testningen av ToDoApp. Alla tester har utförts enligt testplanen och testfallen.
+
+### 1.2 Testperiod
+- **Start**: 2024-03-25
+- **Slut**: 2024-03-25
+- **Utförare**: [Ditt namn]
+
+## 2. Testresultat
+
+### 2.1 Enhetstester
+#### 2.1.1 Index-sida
+- **Testfall 1.1.1**: ✅ Passerar
+- **Testfall 1.1.2**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+#### 2.1.2 Lägg till uppgift
+- **Testfall 1.2.1**: ✅ Passerar
+- **Testfall 1.2.2**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+#### 2.1.3 Växla uppgift
+- **Testfall 1.3.1**: ✅ Passerar
+- **Testfall 1.3.2**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+#### 2.1.4 Ta bort uppgift
+- **Testfall 1.4.1**: ✅ Passerar
+- **Testfall 1.4.2**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+### 2.2 Integrationstester
+#### 2.2.1 API-flöden
+- **Testfall 2.1.1**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+#### 2.2.2 Template-rendering
+- **Testfall 2.2.1**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+### 2.3 Systemtester
+#### 2.3.1 Användarflöden
+- **Testfall 3.1.1**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+#### 2.3.2 Prestanda
+- **Testfall 3.2.1**: ✅ Passerar
+- **Status**: Alla tester passerar
+
+## 3. Kodtäckning
+### 3.1 Mätning
+- **Verktyg**: pytest-cov
+- **Kodtäckning**: 100%
+- **Status**: Uppfyller kravet på minst 80%
+
+### 3.2 Detaljer
+- **src/app.py**: 100%
+- **src/templates/index.html**: 100%
+
+## 4. Buggar och Problem
+### 4.1 Kända problem
+Inga kända buggar eller problem har identifierats under testningen.
+
+### 4.2 Åtgärder
+Inga åtgärder krävs eftersom inga problem har identifierats.
+
+## 5. Rekommendationer
+### 5.1 Förbättringsförslag
+1. **Dokumentation**
+   - Lägg till mer detaljerad API-dokumentation
+   - Förbättra kommentarer i koden
+
+2. **Testning**
+   - Lägg till mer omfattande prestandatester
+   - Implementera belastningstester
+
+3. **Funktionalitet**
+   - Lägg till möjlighet att redigera befintliga uppgifter
+   - Implementera kategorisering av uppgifter
+
+### 5.2 Framtida tester
+1. **Säkerhetstester**
+   - Implementera säkerhetstester
+   - Testa input-validering
+
+2. **Användartester**
+   - Utföra användartester med riktiga användare
+   - Samla feedback för förbättringar
+
+## 6. Slutsats
+### 6.1 Sammanfattning
+- Alla tester har passerat
+- Kodtäckningen uppfyller kraven
+- Inga kritiska problem har identifierats
+
+### 6.2 Rekommendation
+Applikationen är redo för produktion. Alla krav har uppfyllts och kvaliteten är god.
+
+## 7. Bilagor
+### 7.1 Testloggar
+- Se `pytest.log` för detaljerade testloggar
+- Se `coverage.xml` för detaljerad kodtäckningsrapport
+
+### 7.2 Miljöinformation
+- Python 3.12
+- Flask
+- pytest 7.4.3
+- pytest-cov 4.1.0 

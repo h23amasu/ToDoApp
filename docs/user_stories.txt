@@ -1,0 +1,53 @@
+# User Stories - ToDoApp
+
+## Som en användare vill jag...
+
+### Hantera uppgifter
+1. **Lägga till nya uppgifter**
+   - Så att jag kan hålla koll på vad jag behöver göra
+   - Kriterier:
+     - Skriva in uppgiftens beskrivning
+     - Klicka på "Lägg till" för att spara
+     - Se uppgiften direkt i listan
+
+2. **Markera uppgifter som klara/ej klara**
+   - Så att jag kan se min framsteg
+   - Kriterier:
+     - Klicka på en uppgift för att växla status
+     - Se visuell indikation på status (t.ex. genomstruken text)
+
+3. **Ta bort uppgifter**
+   - Så att jag kan hålla listan aktuell
+   - Kriterier:
+     - Klicka på "Ta bort" för att radera en uppgift
+     - Se uppgiften försvinna direkt från listan
+
+### Användargränssnitt
+4. **Se en tydlig och snygg lista**
+   - Så att jag kan enkelt överskåda mina uppgifter
+   - Kriterier:
+     - Responsiv design som fungerar på alla enheter
+     - Tydlig typografi och färger
+     - Lättläst layout
+
+5. **Få feedback på mina handlingar**
+   - Så att jag vet att mina ändringar har sparats
+   - Kriterier:
+     - Direkt uppdatering av listan vid ändringar
+     - Tydlig indikation på lyckade/lyckade operationer
+
+## Tekniska krav
+1. **Prestanda**
+   - Snabb laddning av sidan
+   - Responsivt användargränssnitt
+   - Inga synliga fördröjningar vid operationer
+
+2. **Tillgänglighet**
+   - Fungerar i moderna webbläsare
+   - Responsiv design för mobila enheter
+   - Tydlig och läsbar text
+
+3. **Säkerhet**
+   - Validering av användarinput
+   - Skydd mot vanliga säkerhetsproblem
+   - Säker hantering av data 

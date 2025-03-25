@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .todo-item.done {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .todo-form {
+            margin-bottom: 20px;
+        }
+        .todo-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 70%;
+        }
+        .todo-button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .delete-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Min Todo-lista</h1>
+    
+    <form class="todo-form" action="{{ url_for('add') }}" method="post">
+        <input type="text" name="todo" class="todo-input" placeholder="Lägg till ny uppgift" required>
+        <button type="submit" class="todo-button">Lägg till</button>
+    </form>
+
+    <div class="todo-list">
+        {% for todo in todos %}
+        <div class="todo-item {% if todo.done %}done{% endif %}">
+            <span>{{ todo.task }}</span>
+            <a href="{{ url_for('toggle', index=loop.index0) }}" style="margin-left: 10px;">
+                {% if todo.done %}Ångra{% else %}Klar{% endif %}
+            </a>
+            <a href="{{ url_for('delete', index=loop.index0) }}" class="delete-button">Ta bort</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html> 

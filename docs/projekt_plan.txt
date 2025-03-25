@@ -1,0 +1,48 @@
+# Projektplan - ToDoApp
+
+## Projektöversikt
+Todo App är en webbapplikation byggd med Flask som låter användare hantera sina dagliga uppgifter. Applikationen är en del av kursen i Applikationsutveckling och Testning.
+
+## Mål
+- Skapa en användarvänlig Todo-applikation
+- Implementera grundläggande CRUD-funktionalitet
+- Utveckla och dokumentera teststrategi
+- Följa bästa praxis för utveckling och testning
+
+## Tidsplan
+1. **Fas 1: Planering och Design** (1 vecka)
+   - Definiera krav och user stories
+   - Skapa projektstruktur
+   - Upprätta utvecklingsmiljö
+
+2. **Fas 2: Utveckling** (2 veckor)
+   - Implementera grundläggande funktionalitet
+   - Utveckla användargränssnitt
+   - Implementera tester
+
+3. **Fas 3: Testning och Dokumentation** (1 vecka)
+   - Köra tester och dokumentera resultat
+   - Skapa teknisk dokumentation
+   - Förbereda slutrapport
+
+## Teknisk Stack
+- Backend: Python/Flask
+- Frontend: HTML/CSS
+- Testning: pytest
+- Versionshantering: Git
+
+## Risker och Åtgärder
+1. **Risk**: Komplexitet i testning
+   - **Åtgärd**: Tidig planering av teststrategi och kontinuerlig testning
+
+2. **Risk**: Tidsbrist
+   - **Åtgärd**: Prioritera kärnfunktionalitet och använd agila metoder
+
+3. **Risk**: Tekniska problem
+   - **Åtgärd**: Regelbundna backups och versionshantering
+
+## Kvalitetskrav
+- Kodtäckning: Minst 80%
+- Alla tester ska passera
+- Responsiv design
+- Användarvänligt gränssnitt 

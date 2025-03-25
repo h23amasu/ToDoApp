@@ -1,0 +1,107 @@
+# Testplan - ToDoApp
+
+## 1. Introduktion
+### 1.1 Syfte
+Denna testplan beskriver hur testning ska utföras för Todo App, inklusive testmiljöer, testfall och testprocesser.
+
+### 1.2 Omfattning
+Testplanen täcker:
+- Enhetstester
+- Integrationstester
+- Systemtester
+- Användartester
+
+## 2. Testmiljö
+
+### 2.1 Utvecklingsmiljö
+- Python 3.12
+- Flask
+- pytest
+- pytest-cov
+
+### 2.2 Testverktyg
+- pytest för enhetstester
+- Flask test client för integrationstester
+- pytest-cov för kodtäckning
+
+## 3. Testfall
+
+### 3.1 Enhetstester
+1. **Index-sida**
+   - Testa att sidan laddas korrekt
+   - Verifiera att todos visas
+
+2. **Lägg till uppgift**
+   - Testa att uppgift läggs till
+   - Verifiera att tomma uppgifter hanteras
+
+3. **Växla uppgift**
+   - Testa att status ändras
+   - Verifiera att ogiltiga index hanteras
+
+4. **Ta bort uppgift**
+   - Testa att uppgift tas bort
+   - Verifiera att ogiltiga index hanteras
+
+### 3.2 Integrationstester
+1. **API-flöden**
+   - Testa kompletta användarflöden
+   - Verifiera redirects och statuskoder
+
+2. **Template-rendering**
+   - Testa att templates renderas korrekt
+   - Verifiera att data visas rätt
+
+### 3.3 Systemtester
+1. **Användarflöden**
+   - Testa kompletta användarflöden
+   - Verifiera UI/UX
+
+2. **Prestanda**
+   - Testa laddningstider
+   - Verifiera responsivitet
+
+## 4. Testprocess
+
+### 4.1 Förberedelse
+1. Aktivera virtuell miljö
+2. Installera beroenden
+3. Konfigurera testmiljö
+
+### 4.2 Utförande
+1. Köra enhetstester
+2. Köra integrationstester
+3. Utföra systemtester
+4. Dokumentera resultat
+
+### 4.3 Uppföljning
+1. Analysera resultat
+2. Åtgärda buggar
+3. Uppdatera dokumentation
+
+## 5. Kriterier för godkännande
+
+### 5.1 Tekniska krav
+- Alla tester ska passera
+- Minst 80% kodtäckning
+- Inga kända buggar
+
+### 5.2 Kvalitetskrav
+- God kodkvalitet
+- Tydlig dokumentation
+- Användarvänligt gränssnitt
+
+## 6. Tidsplan
+- Enhetstester: Kontinuerligt
+- Integrationstester: Vid varje push
+- Systemtester: Vid varje release
+
+## 7. Risker och Åtgärder
+1. **Risk**: Tidsbrist
+   - **Åtgärd**: Prioritera kärntester
+
+2. **Risk**: Miljöproblem
+   - **Åtgärd**: Dokumentera miljöuppsättning
+
+3. **Risk**: Buggar i produktion
+   - **Åtgärd**: Omfattande testning 

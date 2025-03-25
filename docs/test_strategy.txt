@@ -1,0 +1,76 @@
+# Teststrategi - ToDoApp
+
+## Översikt
+Denna teststrategi beskriver hur testning ska utföras för ToDoApp. Vi använder en kombination av olika testtyper för att säkerställa applikationens kvalitet.
+
+## Testnivåer
+
+### 1. Enhetstester
+- **Syfte**: Testa enskilda komponenter i isolation
+- **Verktyg**: pytest
+- **Omfattning**:
+  - Flask-routes
+  - Datahantering
+  - Validering
+- **Körning**: Automatisk vid varje commit
+
+### 2. Integrationstester
+- **Syfte**: Testa interaktion mellan komponenter
+- **Verktyg**: pytest med Flask test client
+- **Omfattning**:
+  - API-endpoints
+  - Databasinteraktioner
+  - Template-rendering
+- **Körning**: Automatisk vid varje push
+
+### 3. Systemtester
+- **Syfte**: Testa hela systemet som en enhet
+- **Verktyg**: Manuell testning
+- **Omfattning**:
+  - Användarflöden
+  - UI/UX
+  - Prestanda
+- **Körning**: Vid varje release
+
+## Testmiljöer
+
+### 1. Utvecklingsmiljö
+- Lokal utvecklingsmiljö
+- Snabb feedback
+- Debugging-möjligheter
+
+### 2. Testmiljö
+- Isolerad testmiljö
+- Automatiserade tester
+- Kontinuerlig integration
+
+### 3. Produktionsmiljö
+- Live-miljö
+- Slutanvändartester
+- Prestandatestning
+
+## Testdata
+- Används för att simulera verkliga användningsfall
+- Inkluderar både giltiga och ogiltiga data
+- Återställs mellan testkörningar
+
+## Kodtäckning
+- Målsättning: Minst 80% kodtäckning
+- Mätning: pytest-cov
+- Rapportering: HTML-rapport
+
+## Testautomatisering
+- Automatisk körning av enhetstester
+- Kontinuerlig integration
+- Automatisk rapportering
+
+## Dokumentation
+- Testfall dokumenteras i markdown
+- Testresultat sparas
+- Buggar dokumenteras och följs upp
+
+## Kvalitetskrav
+- Alla tester ska passera
+- Inga kända buggar
+- God kodkvalitet
+- Tydlig dokumentation 

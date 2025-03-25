@@ -1,0 +1,139 @@
+# Testfall - ToDoApp
+
+## 1. Enhetstester
+
+### 1.1 Index-sida
+#### Testfall 1.1.1: Ladda startsidan
+- **Syfte**: Verifiera att startsidan laddas korrekt
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Gå till startsidan (/)
+  2. Kontrollera statuskod (200)
+  3. Verifiera att "Min Todo-lista" visas
+- **Förväntat resultat**: Sidan laddas med korrekt rubrik
+- **Faktiskt resultat**: ✅ Passerar
+
+#### Testfall 1.1.2: Visa tom lista
+- **Syfte**: Verifiera att tom lista hanteras korrekt
+- **Förutsättningar**: Inga todos i systemet
+- **Steg**:
+  1. Gå till startsidan (/)
+  2. Kontrollera att ingen todo visas
+- **Förväntat resultat**: Tom lista visas utan fel
+- **Faktiskt resultat**: ✅ Passerar
+
+### 1.2 Lägg till uppgift
+#### Testfall 1.2.1: Lägg till giltig uppgift
+- **Syfte**: Verifiera att giltiga uppgifter kan läggas till
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Skriv in "Test uppgift"
+  2. Klicka på "Lägg till"
+  3. Verifiera redirect (302)
+  4. Kontrollera att uppgiften visas
+- **Förväntat resultat**: Uppgiften läggs till och visas
+- **Faktiskt resultat**: ✅ Passerar
+
+#### Testfall 1.2.2: Hantera tom uppgift
+- **Syfte**: Verifiera att tomma uppgifter hanteras
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Skicka tom formulär
+  2. Verifiera redirect (302)
+  3. Kontrollera att ingen tom uppgift visas
+- **Förväntat resultat**: Tomma uppgifter ignoreras
+- **Faktiskt resultat**: ✅ Passerar
+
+### 1.3 Växla uppgift
+#### Testfall 1.3.1: Växla giltig uppgift
+- **Syfte**: Verifiera att uppgifter kan växlas
+- **Förutsättningar**: En uppgift finns i systemet
+- **Steg**:
+  1. Lägg till en uppgift
+  2. Klicka på uppgiften
+  3. Verifiera redirect (302)
+  4. Kontrollera att status ändrats
+- **Förväntat resultat**: Uppgiftens status ändras
+- **Faktiskt resultat**: ✅ Passerar
+
+#### Testfall 1.3.2: Hantera ogiltigt index
+- **Syfte**: Verifiera att ogiltiga index hanteras
+- **Förutsättningar**: Inga todos i systemet
+- **Steg**:
+  1. Försök växla uppgift med index -1
+  2. Verifiera redirect (302)
+  3. Kontrollera att inget fel uppstår
+- **Förväntat resultat**: Ogiltiga index hanteras utan fel
+- **Faktiskt resultat**: ✅ Passerar
+
+### 1.4 Ta bort uppgift
+#### Testfall 1.4.1: Ta bort giltig uppgift
+- **Syfte**: Verifiera att uppgifter kan tas bort
+- **Förutsättningar**: En uppgift finns i systemet
+- **Steg**:
+  1. Lägg till en uppgift
+  2. Klicka på "Ta bort"
+  3. Verifiera redirect (302)
+  4. Kontrollera att uppgiften är borta
+- **Förväntat resultat**: Uppgiften tas bort
+- **Faktiskt resultat**: ✅ Passerar
+
+#### Testfall 1.4.2: Hantera ogiltigt index vid borttagning
+- **Syfte**: Verifiera att ogiltiga index hanteras vid borttagning
+- **Förutsättningar**: Inga todos i systemet
+- **Steg**:
+  1. Försök ta bort uppgift med index -1
+  2. Verifiera redirect (302)
+  3. Kontrollera att inget fel uppstår
+- **Förväntat resultat**: Ogiltiga index hanteras utan fel
+- **Faktiskt resultat**: ✅ Passerar
+
+## 2. Integrationstester
+
+### 2.1 API-flöden
+#### Testfall 2.1.1: Komplett CRUD-flöde
+- **Syfte**: Verifiera att alla CRUD-operationer fungerar tillsammans
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Lägg till uppgift
+  2. Verifiera att den visas
+  3. Växla status
+  4. Verifiera statusändring
+  5. Ta bort uppgift
+  6. Verifiera borttagning
+- **Förväntat resultat**: Alla operationer fungerar i sekvens
+- **Faktiskt resultat**: ✅ Passerar
+
+### 2.2 Template-rendering
+#### Testfall 2.2.1: Korrekt rendering av todos
+- **Syfte**: Verifiera att todos renderas korrekt
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Lägg till flera uppgifter
+  2. Kontrollera HTML-strukturen
+  3. Verifiera att alla uppgifter visas
+- **Förväntat resultat**: Todos renderas korrekt i HTML
+- **Faktiskt resultat**: ✅ Passerar
+
+## 3. Systemtester
+
+### 3.1 Användarflöden
+#### Testfall 3.1.1: Responsiv design
+- **Syfte**: Verifiera att designen är responsiv
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Testa på desktop
+  2. Testa på mobil
+  3. Testa på tablet
+- **Förväntat resultat**: Designen anpassar sig till skärmstorlek
+- **Faktiskt resultat**: ✅ Passerar
+
+### 3.2 Prestanda
+#### Testfall 3.2.1: Snabb laddning
+- **Syfte**: Verifiera snabb laddningstid
+- **Förutsättningar**: Applikationen är igång
+- **Steg**:
+  1. Mät laddningstid för startsidan
+  2. Verifiera att tiden är under 1 sekund
+- **Förväntat resultat**: Snabb laddningstid
+- **Faktiskt resultat**: ✅ Passerar 

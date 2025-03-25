@@ -1,0 +1,20 @@
+Lessons Learned:
+Under arbetet med ToDoApp har jag fördjupat mina kunskaper inom applikationsutveckling och testning. 
+
+Här är några viktiga lärdomar:
+1.Utvecklingsprocess:
+Jag fick en bättre förståelse för hur en enkel applikation kan byggas från grunden med hjälp av Flask, inklusive att hantera routes, rendering av HTML och formulärdata.
+
+2.Testdriven utveckling:
+Arbetet med pytest visade hur viktigt det är att tidigt skapa enhetstester för att säkerställa att applikationen fungerar som förväntat.
+Lärde mig att felsöka och förbättra testfallen för att hantera edge-cases.
+
+3.Versionshantering:
+Jag fick praktisk erfarenhet av Git, inklusive commits, branches och att organisera kod för samarbete.
+
+4.Problemlösning:
+Felsökning av koden och testerna hjälpte mig att utveckla mitt tålamod och min förmåga att analysera problem.
+
+5.Tidsplanering och dokumentation:
+Projektet gav insikt i hur viktig tydlig dokumentation är, både för att hålla projektet organiserat och för att underlätta för andra som granskar det.
+Sammantaget har projektet gett mig en solid grund för framtida projekt inom applikationsutveckling och mjukvarutestning.
